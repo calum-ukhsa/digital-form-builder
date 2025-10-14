@@ -32,8 +32,8 @@
               {% set toAdd = ["added", splitDash[splitDash.length - 1]] %}
               {% set addOrRemoveLink = splitDash.slice(0, -1).concat(toAdd).join("-") %}
 
-              <a href="{{ addOrRemoveLink }}" class="govuk-button govuk-button--secondary">
-                Add or remove {{ detail.title.split(" ").slice(0, -1).join(" ") | lower }}
+              <a href="{{ addOrRemoveLink }}" role="button" class="govuk-button govuk-button--secondary">
+                Add or delete {{ detail.title.split(" ").slice(0, -1).join(" ") | lower }}
               </a>
             {% endif %}
           {% else %}
